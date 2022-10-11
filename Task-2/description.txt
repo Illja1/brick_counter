@@ -1,0 +1,8 @@
+1.Import libraries
+2.We need colorless picture
+3.Create a kernel here. This kernel will be 3x3 size.(The reason for creating a kernel and applying it with the morphologyEx method is that although we blur the picture, some small black or white areas (noise) may remain. We used this method to destroy these.)
+4.Now we need to replace the value of each pixel with the distance to the nearest background pixel using distanceTransform. We will do this using the distanceTransform method. When we apply this method, our array type turns into float32. So we will do 2 more steps and convert our array back to uint8 type.
+5.We use findContours to detect objects. Then we make our array regular with the grap_contours method.
+6.Return picture
+
+
