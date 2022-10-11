@@ -1,0 +1,3 @@
+A program that allows you to calculate the number of bricks in the photo. A kernel mesh was used (The reason for creating a kernel and applying it with the morphologyEx method is that although we blur the picture, some small black or white areas (noise) may remain. We used this method to destroy these.)
+Now we need to replace the value of each pixel with the distance to the nearest background pixel using distanceTransform. We will do this using the distanceTransform method. When we apply this method, our array type turns into float32. So we will do 2 more steps and convert our array back to uint8 type.
+We use findContours to detect objects. Then we make our array regular with the grap_contours method.
